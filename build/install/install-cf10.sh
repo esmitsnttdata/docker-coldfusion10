@@ -1,7 +1,4 @@
 #!/bin/sh
-#
-# Script based on https://forums.adobe.com/message/4727551
-
 /tmp/ColdFusion_10_WWEJ_linux64.bin -f installer.profile
 
 # Disable admin security
@@ -22,8 +19,8 @@ wget --O /dev/null http://localhost:8500/CFIDE/administrator/index.cfm?configSer
 #apply mandatory hotfix
 java -jar /tmp/cf10_mdt_updt.jar -i silent
 
-#apply hotfix 13
-java -jar /tmp/hotfix_013.jar -i silent
+#apply hotfix 23
+java -jar /tmp/hotfix_023.jar -i silent
 
 # Configure Apache2 to run in front of Tomcat
 /opt/coldfusion10/cfusion/runtime/bin/wsconfig -ws Apache -dir /etc/apache2/ -bin /usr/sbin/apache2 -script /etc/init.d/apache2

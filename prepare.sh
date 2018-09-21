@@ -9,9 +9,9 @@ then
 	chmod 755 ColdFusion_10_WWEJ_linux64.bin
 fi
 
-if [ ! -f "hotfix_013.jar" ]
+if [ ! -f "hotfix_023.jar" ]
 then
-	wget http://198.183.217.181/hotfix_013.jar
+	wget http://198.183.217.181/hotfix_023.jar
 	chmod 755 hotfix_013.jar
 fi
 
