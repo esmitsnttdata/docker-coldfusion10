@@ -7,15 +7,19 @@ www.cfmlrepo.com has a shared repository
 
 Will build and patch ColdFusion 10 as Docker image in Container
 
-If in Windows make sure all files are with unix EOL formating.
+If in Windows make sure all files use unix EOL formatting.
 
-Once you have the  pulled down the repo  can build the Docker container:
+Once you have the  pulled down the repository containts, you can run the prepare script:
 
+    ./prepare.sh
+
+and then you can build the Docker container:
+	
     docker build -t cf10 .
 
 And run it with:
 
-    docker run -d -p 8880:80 -v /var/www:/var/www cf10
+	docker run -d -p 8880:80 -v "[DIRECTORY_CF_CODE]:/var/www cf10
 
 
 # Credits

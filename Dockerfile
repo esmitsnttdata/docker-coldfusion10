@@ -1,13 +1,13 @@
 FROM phusion/baseimage:0.9.9
-MAINTAINER finalcut bill@rawlinson.us
+MAINTAINER coldfusion10 esteban.smits@gmail.com
 EXPOSE 80 8500
 VOLUME ["/var/www", "/tmp/config"]
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV REFRESHED_AT 2014_08_21_1
+ENV REFRESHED_AT 2018_09_21
 
 RUN apt-get update
-RUN apt-get install -y wget unzip xsltproc apache2 default-jre && apt-get clean
+RUN apt-get install -y wget unzip xsltproc apache2 default-jre git && apt-get clean
 
 ADD ./build/install/ /tmp/
 ADD ./build/service/ /etc/service/
